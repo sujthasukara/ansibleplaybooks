@@ -1,0 +1,14 @@
+---
+
+- name: install and configure apache
+  hosts: web
+  become: yes
+
+  vars: 
+    ansible_become_password: "vagrant"
+    
+  roles: 
+    - apache
+  # - database-oracle
+  # - ntp
+
